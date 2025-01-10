@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class FlyBehavior : MonoBehaviour
 {
     [SerializeField] private float _velocity = 1.5f;
-    //[SerializeField] private float _rotationSpeed = 10f;
+    [SerializeField] private float _rotationSpeed = 10f;
 
     private Rigidbody2D _rb;
 
@@ -22,5 +22,10 @@ public class FlyBehavior : MonoBehaviour
         {
             _rb.linearVelocity = Vector2.up * _velocity;
         }
+    }
+
+    private void FixedUpdate()
+    {
+        transform.rotation = Quaternion.Euler(0, 0, _rb.linearVelocity.y * _rotationSpeed);
     }
 }
