@@ -17,8 +17,8 @@ public class FlyBehavior : MonoBehaviour
 
     private void Update()
     {
-        //if (Mouse.current.leftButton.wasPressedThisFrame)
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+            //if (Input.GetKeyDown(KeyCode.Space))
         {
             _rb.linearVelocity = Vector2.up * _velocity;
         }
@@ -27,5 +27,9 @@ public class FlyBehavior : MonoBehaviour
     private void FixedUpdate()
     {
         transform.rotation = Quaternion.Euler(0, 0, _rb.linearVelocity.y * _rotationSpeed);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        GameManager.instance.GameOver();
     }
 }
