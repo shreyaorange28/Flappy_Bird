@@ -9,7 +9,7 @@ I learned how to create Flappy Bird on Unity to learn how to create an endless l
 
 ## Video
 
-<video src="[https://github.com/user-attachments/assets/01291c1a-e45f-440a-9be8-d7d4a9119630](https://github.com/user-attachments/assets/6477a1d4-976b-47c9-8001-267536fdd7c3)"></video>
+<video src="https://github.com/user-attachments/assets/6477a1d4-976b-47c9-8001-267536fdd7c3"></video>
 
 
 ## Next Steps
